@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: inherit;
+  color: $clr-black;
+  background-color: $clr-white;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+}
+
+a {
+  transition-duration: .2s;
+  color: $clr-black;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba($clr-theme-1, .2);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $clr-black;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.tag {
+    font-size: .8rem;
+    line-height: 1rem;
+    color: $clr-grey-500;
+
+    &:hover {
+      color: $clr-grey-800;
+    }
+  }
+}
+
+code {
+  font-size: .8rem;
+  line-height: 1rem;
+
+  &:not(.hljs) {
+    background-color: $clr-grey-100;
+    border-bottom: 1px solid $clr-grey-200;
+    color: $clr-black;
+    font-size: .8rem;
+    border-radius: 2px;
+  }
+}
+
+pre {
+  font-size: .8rem;
+  line-height: 1rem;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+h4,
+h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+div,
+span,
+p,
+a {
+  word-wrap: break-word;
+}
+
+ul,
+li,
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Material icons
+http://google.github.io/material-design-icons/#icon-font-for-the-web
+*/
+.material-icons {
+  /* Recommend icon size by Google */
+  &.md-18 {
+    font-size: 18px;
+  }
+
+  &.md-24 {
+    font-size: 24px;
+  }
+
+  &.md-36 {
+    font-size: 36px;
+  }
+
+  &.md-48 {
+    font-size: 48px;
+  }
+  /* Rules for using icons as black on a light background. */
+  .md-dark { color: rgba(0, 0, 0, 0.54); }
+  .md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+  /* Rules for using icons as white on a dark background. */
+  .md-light { color: rgba(255, 255, 255, 1); }
+  .md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+  &.md-8 {
+    font-size: 8px;
+  }
+
+  &.md-12 {
+    font-size: 12px;
+  }
+}
+
+#TableOfContents {
+  font-size: .8rem;
+  line-height: 1.5rem;
+
+  a {
+    display: block;
+  }
+
+  ul ul a {
+    text-decoration: none;
+  }
+
+  > ul {
+    padding-left: 0;
+    list-style: none;
+
+    > li {
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 0;
+      font-weight: normal;
+      list-style: none;
+
+      ul {
+        padding-left: 1rem;
+        list-style: none;
+      }
+    }
+  }
+}
